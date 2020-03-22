@@ -1,0 +1,107 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="700">
+	<Grid>
+		<TabControl x:Name="tab">
+			<TabItem Header="General">
+				<Grid>
+				<Border Padding="30">
+					<StackPanel >
+						<Grid >
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+						</Grid.ColumnDefinitions>
+
+						<Button Content="Save" Grid.Column="0" Margin="0,0,20,0" />
+							<Button Content="Load" Grid.Column="1" Margin="0,0,20,0" />
+						<Button Content="Refresh" Grid.Column="2"  Margin="20,0,0,0" Click="Refresh"/>
+					</Grid>
+					<Button Content="New" Margin="40,50,40,0" />
+					<TextBlock Text="your choices:" Margin="40,40,0,10" FontWeight="Bold" FontSize="17"/>
+					<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="*"/>
+							</Grid.ColumnDefinitions>
+							<StackPanel Grid.Column="0">
+								<CheckBox x:Name="checkbox1" Content="checkbox1" Margin="40,10,0,10"/>
+								<CheckBox x:Name="checkbox2" Content="checkbox2" Margin="40,5,0,10"/>
+								<CheckBox x:Name="checkbox3" Content="checkbox3" Margin="40,5,0,10"/>
+								<CheckBox x:Name="checkbox4" Content="checkbox4" Margin="40,5,0,10"/>
+								<CheckBox x:Name="checkbox5" Content="checkbox5" Margin="40,5,0,10"/>
+							</StackPanel>							  
+							<StackPanel Grid.Column="1">
+								<CheckBox x:Name="checkbox6" Content="checkbox6" Margin="40,10,0,10"/>
+								<CheckBox x:Name="checkbox7" Content="checkbox7" Margin="40,5,0,10"/>
+								<CheckBox x:Name="checkbox8" Content="checkbox8" Margin="40,5,0,10"/>
+								<CheckBox x:Name="checkbox9" Content="checkbox9" Margin="40,5,0,10"/>
+								<CheckBox x:Name="checkbox10" Content="checkbox10" Margin="40,5,0,10"/>
+							</StackPanel>
+							<ComboBox Grid.Column="2" Margin="0,40,40,85" SelectedIndex="0">
+								<ComboBoxItem Content="item1"/>
+								<ComboBoxItem Content="item2"/>
+								<ComboBoxItem Content="item3"/>
+								<ComboBoxItem Content="item4"/>
+								<ComboBoxItem Content="item5"/>
+							</ComboBox>
+						</Grid>
+						<TextBlock Text="Note" FontWeight="Bold" FontSize="30" Margin="40,60,40,0"/>
+						<TextBox x:Name="Note" Margin="40,10,40,0" Background="#eee" Padding="10" TextWrapping="Wrap"  AcceptsReturn="False"/>
+						
+
+
+						</StackPanel>
+						
+						
+			</Border>
+					<Button Content="Next Page" DockPanel.Dock="Bottom" VerticalAlignment="Bottom" Margin="80,0,80,20" MaxWidth="150" Click="Next_page"/>
+			</Grid>
+			</TabItem>
+
+			<TabItem Header="Security" >
+				<Grid>
+					<StackPanel>
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="3*"/>
+							</Grid.ColumnDefinitions>
+							<Grid.RowDefinitions>
+								<RowDefinition/>
+								<RowDefinition/>
+								<RowDefinition/>
+								<RowDefinition/>
+							</Grid.RowDefinitions>
+
+							<TextBlock Text="Name :" Margin="20,20" FontSize="20" Grid.Column="0" Grid.Row="0"/>
+							<TextBlock Text="Family :" Margin="20,20" FontSize="20" Grid.Column="0" Grid.Row="1"/>
+							<TextBlock Text="Age :" Margin="20,20" FontSize="20" Grid.Column="0" Grid.Row="2"/>
+							<TextBlock Text="Equation :" Margin="20,20" FontSize="20" Grid.Column="0" Grid.Row="3"/>
+
+
+							<TextBox Background="#eee" Margin="20,30" Grid.Column="1" Grid.Row="0"/>
+							<TextBox Background="#eee" Margin="20,30" Grid.Column="1" Grid.Row="1"/>
+							<TextBox Background="#eee" Margin="20,30" Grid.Column="1" Grid.Row="2"/>
+							<TextBox Background="#eee" Margin="20,30" Grid.Column="1" Grid.Row="3" AcceptsReturn="True" TextWrapping="WrapWithOverflow"/>
+
+						</Grid>
+					</StackPanel>
+					<Button Content="show a picture" VerticalAlignment="Bottom" Margin="100,0,100,30" MaxHeight="100" MinHeight="70" MaxWidth="1200" MinWidth="450" Click="show_picture" />
+					<Image   Margin="12,12,16,71" Name="imgPhoto" Stretch="Fill" Grid.Column="1" />
+					<Button Content="Hide" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10" Click="Hide"/>
+				</Grid>
+
+			</TabItem>
+		</TabControl>
+	</Grid>
+
+
+</Window>
