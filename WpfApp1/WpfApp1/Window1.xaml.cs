@@ -37,7 +37,6 @@ namespace WpfApp1
 		private void Quit(object sender, RoutedEventArgs e)
 		{
 			this.Close();
-			emad.a = 0;
 		}
 
 		private void Time_click(object sender, EventArgs e)
